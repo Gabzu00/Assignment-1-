@@ -1,0 +1,25 @@
+.navbar {
+  font-size: 35px;
+}
+
+.FirstPageTitle {
+  padding-top: 25px;
+  font-size: 50px;
+}
+
+.BookIcon {
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
+
+.navbar-nav {
+  text-align: center;
+}
+
+.nav-item3 {
+  position: relative;
+  left: 780px;
+}

@@ -1,0 +1,11 @@
+[
+  {
+    "id": 1,
+    "title": "Book title",
+    "author": "Some Author",
+    "description": "Lorem ipsum / or your text",
+    "category": "UX",
+    "price": 150
+  },
+  {}
+]
