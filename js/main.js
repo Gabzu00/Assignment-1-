@@ -3,6 +3,7 @@ import { getJSON } from './utils/getJSON';
 
 let books;
 
+
 async function start() {
   books = await getJSON('/json/books.json')
   initPage();
@@ -100,28 +101,30 @@ function bookPage() {
   document.querySelector("#bookButton").onclick = function () {
     const homeElement = document.querySelector(".mainPage");
     homeElement.innerHTML = ``;
+
     filterByAuthor();
     filterByPrice();
     filterByCategori();
     sortingOptions();
 
     let htmlArray = books.map(({
-      title, author, category, price
+      title, author, category, price, description, img
     }) => /*html*/`
     <div class="book">
       <p><span>Title</span>${title}</p>
       <p><span>Author</span>${author}</p>
       <p><span>Price</span>${price}</p>
       <p><span>Category</span>${category}</p>
-      <button class="detaildButton btn-lg">Details</button>
+      <button class="detaildButton btn-lg" onclick="showModal('${description}', '${img}');">Details</button>
       <button class="cart btn-lg">Add to cart</button>
+      
     </div>
     `);
     document.querySelector('.displayBook').innerHTML = htmlArray.join('');
 
 
-  }
 
+  };
 }
 
 
