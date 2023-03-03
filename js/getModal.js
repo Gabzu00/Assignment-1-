@@ -1,7 +1,7 @@
 var modalWrap = null;
 
-const showModal = (title, img) => {
-  debugger
+const showModal = (title, img, price) => {
+
   console.log(title)
   modalWrap = document.createElement('div');
   modalWrap.innerHTML = /*html*/ `
@@ -17,7 +17,7 @@ const showModal = (title, img) => {
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeModal();">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <button type="button" class="btn btn-success" onclick="addBookToCart('${title}', '${price}', '${img}');">Buy book</button>
           </div>
         </div>
       </div>

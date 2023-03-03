@@ -9,6 +9,7 @@ async function start() {
   initPage();
   homePage();
   bookPage();
+
 }
 
 function initPage() {
@@ -38,7 +39,7 @@ function filterByAuthor() {
       <p class="priceRange text-center text-dark"> Select a author</p>
       <form class="form-inline">
         <input class="form-control mr-sm-2 bg-white" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0 bg-white" type="submit">Search</button>
+        <button class="btn btn-outline-success my-2 my-sm-0 btn-success" type="submit">Search</button>
       </form>
     <div class="priceFilter"></div>
   `;
@@ -106,7 +107,7 @@ function bookPage() {
     filterByPrice();
     filterByCategori();
     sortingOptions();
-
+    debugger
     let htmlArray = books.map(({
       title, author, category, price, description, img
     }) => /*html*/`
@@ -115,15 +116,12 @@ function bookPage() {
       <p><span>Author</span>${author}</p>
       <p><span>Price</span>${price}</p>
       <p><span>Category</span>${category}</p>
-      <button class="detaildButton btn-lg" onclick="showModal('${description}', '${img}');">Details</button>
-      <button class="cart btn-lg">Add to cart</button>
+      <button class="detaildButton btn-lg btn-primary" onclick="showModal('${description}', '${img}', '${price}');">Details</button>
+      <button class="cart btn-lg btn-success" id="addBook" onclick="addBookToCart('${title}', '${price}', '${img}');">Buy book</button>
       
     </div>
     `);
     document.querySelector('.displayBook').innerHTML = htmlArray.join('');
-
-
-
   };
 }
 

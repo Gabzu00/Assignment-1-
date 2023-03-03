@@ -37,9 +37,18 @@
         <li class="nav-item">
           <a class="nav-link" id="bookButton" href="#">Books</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" id="bookButton" href="#">Cart</a>
+        <li class="nav-item ">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false" href="#">Cart
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <p class="priceRange">Your cart</p>
+            <div class="itemInCart"></div>
+            <div class="total">Total: </div>
+          </div>
         </li>
+
       </ul>
     </div>
   </nav>
@@ -54,6 +63,7 @@
 
   <script type="module" src="/js/main.js"></script>
   <script src="/js/getModal.js"></script>
+  <script src="/js/cart.js"></script>
 </body>
 
 </html>
