@@ -1,20 +1,14 @@
 let cart = []
 let count = 0
-
+let total = 0
 
 function addCount(title) {
-  debugger
-  console.log(cart)
   findObject = cart.filter(function (entry) { return entry.name === title })
   findObject[0].bookAmount++
-  console.log("Hello " + findObject[0].bookAmount)
-
 }
 
 
 function addBookToCart(title, price, img) {
-  debugger
-
   let bookObject = {
     name: title,
     amount: price,
@@ -27,9 +21,19 @@ function addBookToCart(title, price, img) {
   } else {
     cart.push(bookObject)
     addCount(title)
+
   }
 
+  let add = parseInt(bookObject.amount)
+  total += add
 
+  const bookElement = document.querySelector(".amount");
+  bookElement.innerHTML = /*html*/`
+      <div>
+        <p>${total}</p>
+      </div>
+      
+    `;
 
   let htmlArray = cart.map(({
     name, amount, picture, bookAmount
@@ -38,6 +42,7 @@ function addBookToCart(title, price, img) {
     <p> Title: ${name}</p>
     <p> Price: ${amount}</p>
     <p> Count: ${bookAmount}</p>
+    <p> Row Sum: ${(bookAmount * amount)}</p>
     <img class="bookImageCart img-fluid" src="${picture}" alt="Responsive image">
     <hr class="line">
     </div>
