@@ -156,8 +156,11 @@ main {
 }
 
 .line {
-  width: 500px;
+  position: relative;
+  right: 10px;
+  width: 497px;
   height: 2px;
+
   background-color: black;
 }
 

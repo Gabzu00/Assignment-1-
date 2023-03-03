@@ -1,8 +1,7 @@
 var modalWrap = null;
 
-const showModal = (title, img, price) => {
+const showModal = (description, title, img, price) => {
 
-  console.log(title)
   modalWrap = document.createElement('div');
   modalWrap.innerHTML = /*html*/ `
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -12,7 +11,7 @@ const showModal = (title, img, price) => {
             <h5 class="modal-title" id="exampleModalLabel">Book details</h5>
           </div>
           <div class="modal-body">
-            <p><span>Title: </span>${title}</p>
+            <p><span>Description: </span>${description}</p>
             <img class="descriptionImage img-fluid" src="${img}" alt="Responsive image">
           </div>
           <div class="modal-footer">

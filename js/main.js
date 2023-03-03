@@ -107,7 +107,7 @@ function bookPage() {
     filterByPrice();
     filterByCategori();
     sortingOptions();
-    debugger
+
     let htmlArray = books.map(({
       title, author, category, price, description, img
     }) => /*html*/`
@@ -116,7 +116,7 @@ function bookPage() {
       <p><span>Author</span>${author}</p>
       <p><span>Price</span>${price}</p>
       <p><span>Category</span>${category}</p>
-      <button class="detaildButton btn-lg btn-primary" onclick="showModal('${description}', '${img}', '${price}');">Details</button>
+      <button class="detaildButton btn-lg btn-primary" onclick="showModal('${description}','${title}', '${img}', '${price}');">Details</button>
       <button class="cart btn-lg btn-success" id="addBook" onclick="addBookToCart('${title}', '${price}', '${img}');">Buy book</button>
       
     </div>
