@@ -12,7 +12,7 @@
     "id": 2,
     "title": "The Art Of Thinking Clearly",
     "author": "Rolf Dobelli",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "UX",
     "price": 213,
     "img": "https://source.unsplash.com/random/?book"
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Why Has Nobody Told Me This Before?",
     "author": "Julie Smith",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "UX",
     "price": 99,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "The Design Of Every Day Thing",
     "author": "Don Norman",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "UX",
     "price": 224,
     "img": "https://source.unsplash.com/random/?game"
@@ -39,7 +39,7 @@
     "id": 5,
     "title": "Rethinking Users",
     "author": "Michael Youngblood",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "UX",
     "price": 99,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -48,7 +48,7 @@
     "id": 6,
     "title": "HTML & CSS",
     "author": "J Duckett",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "HTML",
     "price": 240,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -57,7 +57,7 @@
     "id": 7,
     "title": "HTML5",
     "author": "Jennifer Nieber Robbins",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "HTML",
     "price": 134,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -66,7 +66,7 @@
     "id": 8,
     "title": "The First 90 Days",
     "author": "Michael D Watkins",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "HTML",
     "price": 251,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -75,7 +75,7 @@
     "id": 9,
     "title": "Web Coding Bible",
     "author": "Chong Lip Phang",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "HTML",
     "price": 530,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -93,7 +93,7 @@
     "id": 11,
     "title": "CSS - an introduction",
     "author": "Gabriel Petersson",
-    "description": "Lorem ipsum / or your text",
+    "description": "Min egna text",
     "category": "CSS",
     "price": 1000,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -102,7 +102,7 @@
     "id": 12,
     "title": "Modern CSS",
     "author": "Joe Attardi",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "CSS",
     "price": 331,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -111,7 +111,7 @@
     "id": 13,
     "title": "Eric Mayer on CSS",
     "author": "Eric Mayer",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "CSS",
     "price": 399,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -120,7 +120,7 @@
     "id": 14,
     "title": "CSS in Depth",
     "author": "Keith J Grant",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "CSS",
     "price": 329,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -129,8 +129,8 @@
     "id": 15,
     "title": "CSS: The Definite Guide",
     "author": "Meyer",
-    "description": "Lorem ipsum / or your text",
-    "category": "UX",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "category": "CSS",
     "price": 99,
     "img": "https://source.unsplash.com/random/?instrument"
   },
@@ -147,7 +147,7 @@
     "id": 17,
     "title": "Javascript the definitive guide",
     "author": "David Flanagan",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "Javascript",
     "price": 565,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -156,7 +156,7 @@
     "id": 18,
     "title": "Eloquent Javascript",
     "author": "Marijn Haverbeke",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "Javascript",
     "price": 334,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -165,7 +165,7 @@
     "id": 19,
     "title": "Javascript: the good parts",
     "author": "Douglas Crockford",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "Javascript",
     "price": 219,
     "img": "https://source.unsplash.com/random/?instrument"
@@ -174,7 +174,7 @@
     "id": 20,
     "title": "Object-Oriented Javascript",
     "author": "Ved Antani",
-    "description": "Lorem ipsum / or your text",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "Javascript",
     "price": 402,
     "img": "https://source.unsplash.com/random/?instrument"

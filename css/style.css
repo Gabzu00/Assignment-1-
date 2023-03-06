@@ -29,6 +29,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+}
+
+.form-control {
+  width: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
 }
 
 .form-inline {
@@ -55,14 +65,7 @@
   padding-bottom: 20px;
 }
 
-.form-control {
-  width: 150px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  display: inline-block;
-}
+
 
 .sorting {
   font-size: 30px;

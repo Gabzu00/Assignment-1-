@@ -1,34 +1,51 @@
 import '../css/style.css';
 import { getJSON } from './utils/getJSON';
 
-let books;
+let books,
+  chosenCategoryFilter = 'all',
+  go = 0;
 
 
 async function start() {
   books = await getJSON('/json/books.json')
-  initPage();
-  homePage();
-  bookPage();
+  something();
+  if (go == 1) {
+    filterByAuthor();
+    filterByPrice();
+    filterByCategori();
+    sortingOptions();
+    bookPage();
+  }
 
 }
 
-function initPage() {
+var something = (function () {
+  var executed = false;
+  return function () {
+    if (!executed) {
+      executed = true;
+      // do something
+      const homeElement = document.querySelector(".mainPage");
+      homeElement.innerHTML = /*html*/`
+        <p class="FirstPageTitle text-center text-dark "> Hello and welcome to the bookstore</p>
+        <img class="BookIcon img-fluid" alt="Responsive image" src="/Images/BookIcon.jpg">
+      `;
+
+      const bookElement = document.querySelector(".bookPage");
+      bookElement.innerHTML = ``;
+    }
+  };
+})();
+
+
+document.querySelector("#homeButton").onclick = function () {
   const homeElement = document.querySelector(".mainPage");
   homeElement.innerHTML = /*html*/`
       <p class="FirstPageTitle text-center text-dark "> Hello and welcome to the bookstore</p>
       <img class="BookIcon img-fluid" alt="Responsive image" src="/Images/BookIcon.jpg">
     `;
-}
-function homePage() {
-  document.querySelector("#homeButton").onclick = function () {
-    const homeElement = document.querySelector(".mainPage");
-    homeElement.innerHTML = /*html*/`
-      <p class="FirstPageTitle text-center text-dark "> Hello and welcome to the bookstore</p>
-      <img class="BookIcon img-fluid" alt="Responsive image" src="/Images/BookIcon.jpg">
-    `;
-    const bookElement = document.querySelector(".bookPage");
-    bookElement.innerHTML = ``;
-  }
+  const bookElement = document.querySelector(".bookPage");
+  bookElement.innerHTML = ``;
 }
 
 
@@ -54,9 +71,9 @@ function filterByPrice() {
     <input class="form-control mr-sm-2 bg-white " type="search" placeholder="min" aria-label="Search">
     <input class="form-control mr-sm-2 bg-white" type="search" placeholder="max" aria-label="Search">
     </div>
-
     <div class="addFilter"></div>
   `;
+
 }
 
 function filterByCategori() {
@@ -64,18 +81,24 @@ function filterByCategori() {
   bookElement.innerHTML = /*html*/`
       <div class="categoriFilter">
       <label><span>Filter by categories:</span>
-      <select>
-        <option>All</option>
+      <select class="option">
+        <option>all</option>
         <option>UX</option>
         <option>HTML</option>
         <option>CSS</option>
-        <option>JavaScript</option>
+        <option>Javascript</option>
       </select>
     </label>
     </div>
     <div class="addSorting"></div>
-    `;
+  `;
 
+  // Add event listener to update chosenCategoryFilter
+  const selectElement = document.querySelector('.option');
+  selectElement.addEventListener('change', function () {
+    chosenCategoryFilter = selectElement.value;
+    bookPage(); // Re-render the book page with the updated filter
+  });
 }
 
 function sortingOptions() {
@@ -94,23 +117,32 @@ function sortingOptions() {
     </label>
     </div>
     <div class="displayBook"></div>
-
     `;
+
+}
+
+document.querySelector("#bookButton").onclick = function () {
+  if (go == 0) {
+    go++;
+  }
+
+  start();
 }
 
 function bookPage() {
-  document.querySelector("#bookButton").onclick = function () {
-    const homeElement = document.querySelector(".mainPage");
-    homeElement.innerHTML = ``;
+  const homeElement = document.querySelector(".mainPage");
+  homeElement.innerHTML = ``;
 
-    filterByAuthor();
-    filterByPrice();
-    filterByCategori();
-    sortingOptions();
+  console.log(chosenCategoryFilter)
 
-    let htmlArray = books.map(({
-      title, author, category, price, description, img
-    }) => /*html*/`
+  let filteredBooks = books.filter(
+    ({ category }) => (chosenCategoryFilter === 'all' || chosenCategoryFilter === category)
+  );
+
+
+  let htmlArray = filteredBooks.map(({
+    title, author, category, price, description, img
+  }) => /*html*/`
     <div class="book">
       <p><span>Title</span>${title}</p>
       <p><span>Author</span>${author}</p>
@@ -121,9 +153,9 @@ function bookPage() {
       
     </div>
     `);
-    document.querySelector('.displayBook').innerHTML = htmlArray.join('');
-  };
-}
+  document.querySelector('.displayBook').innerHTML = htmlArray.join('');
+};
+
 
 
 start();

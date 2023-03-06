@@ -21,7 +21,6 @@ function addBookToCart(title, price, img) {
   } else {
     cart.push(bookObject)
     addCount(title)
-
   }
 
   let add = parseInt(bookObject.amount)
