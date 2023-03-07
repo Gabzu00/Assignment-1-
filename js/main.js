@@ -4,9 +4,10 @@ import { getJSON } from './utils/getJSON';
 let books,
   chosenCategoryFilter = 'all',
   go = 0,
-  min = 0,
-  max = 1000,
-  selectedAuthor;
+  min,
+  max,
+  selectedAuthor,
+  chosenSortOption = 'Title ascending';
 
 async function start() {
   books = await getJSON('/json/books.json')
@@ -100,8 +101,10 @@ function filterByPrice() {
 }
 
 function getData() {
+  debugger
   min = document.getElementById("min").value;
   max = document.getElementById("max").value;
+
 }
 
 function filterByCategori() {
@@ -134,7 +137,7 @@ function sortingOptions() {
   bookElement.innerHTML = /*html*/`
       <div class="sorting">
       <label><span>Sorting options:</span>
-      <select>
+      <select class="sortOption">
         <option>Title ascending</option>
         <option>Title decending</option>
         <option>Price ascending</option>
@@ -146,7 +149,41 @@ function sortingOptions() {
     </div>
     <div class="displayBook"></div>
     `;
+  const selectElement = document.querySelector('.sortOption');
+  selectElement.addEventListener('change', function () {
+    chosenSortOption = selectElement.value;
+    bookPage(); // Re-render the book page with the updated filter
+  });
+}
 
+function sortByTitleAcending(books) {
+  books.sort(({ title: aTitle }, { title: bTitle }) =>
+    aTitle > bTitle ? 1 : -1);
+}
+
+function sortByTitleDecending(books) {
+  books.sort(({ title: aTitle }, { title: bTitle }) =>
+    aTitle < bTitle ? 1 : -1);
+}
+
+function sortByPriceAcending(books) {
+  books.sort(({ price: aPrice }, { price: bPrice }) =>
+    aPrice > bPrice ? 1 : -1);
+}
+
+function sortByPriceDecending(books) {
+  books.sort(({ price: aPrice }, { price: bPrice }) =>
+    aPrice < bPrice ? 1 : -1);
+}
+
+function sortByAuthorAcending(books) {
+  books.sort(({ author: aAuthor }, { author: bAuthor }) =>
+    aAuthor > bAuthor ? 1 : -1);
+}
+
+function sortByAuthorDecending(books) {
+  books.sort(({ author: aAuthor }, { author: bAuthor }) =>
+    aAuthor < bAuthor ? 1 : -1);
 }
 
 document.querySelector("#bookButton").onclick = function () {
@@ -163,11 +200,21 @@ function bookPage() {
   console.log(chosenCategoryFilter)
   debugger
   let filteredBooks = books.filter(
-    ({ category, price, author }) => (chosenCategoryFilter === 'all' || chosenCategoryFilter === category)
-      && (price >= min && price <= max) && (author === selectedAuthor || selectedAuthor === undefined || selectedAuthor === '')
+    ({ category, price, author }) =>
+      (chosenCategoryFilter === 'all' || chosenCategoryFilter === category) &&
+      ((min === undefined || min === '' || isNaN(min)) || price >= min) &&
+      ((max === undefined || max === '' || isNaN(max)) || price <= max) &&
+      (author === selectedAuthor || selectedAuthor === undefined || selectedAuthor === '')
   );
 
+  console.log(min + " hello " + max)
 
+  if (chosenSortOption === 'Title ascending') { sortByTitleAcending(filteredBooks) }
+  if (chosenSortOption === 'Title decending') { sortByTitleDecending(filteredBooks) }
+  if (chosenSortOption === 'Price ascending') { sortByPriceAcending(filteredBooks) }
+  if (chosenSortOption === 'Price decending') { sortByPriceDecending(filteredBooks) }
+  if (chosenSortOption === 'Author ascending') { sortByAuthorAcending(filteredBooks) }
+  if (chosenSortOption === 'Author decending') { sortByAuthorDecending(filteredBooks) }
   let htmlArray = filteredBooks.map(({
     title, author, category, price, description, img
   }) => /*html*/`
