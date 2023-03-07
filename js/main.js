@@ -3,7 +3,9 @@ import { getJSON } from './utils/getJSON';
 
 let books,
   chosenCategoryFilter = 'all',
-  go = 0;
+  go = 0,
+  min = 0,
+  max = 1000;
 
 
 async function start() {
@@ -15,6 +17,7 @@ async function start() {
     filterByCategori();
     sortingOptions();
     bookPage();
+
   }
 
 }
@@ -65,15 +68,25 @@ function filterByAuthor() {
 function filterByPrice() {
   const bookElement = document.querySelector(".priceFilter");
   bookElement.innerHTML = /*html*/`
-    
     <p class="priceRange">Select a price range</p>
     <div class="fix">
-    <input class="form-control mr-sm-2 bg-white " type="search" placeholder="min" aria-label="Search">
-    <input class="form-control mr-sm-2 bg-white" type="search" placeholder="max" aria-label="Search">
+      <input class="form-control mr-sm-2 bg-white" type="search" placeholder="min" aria-label="Search" id="min">
+      <input class="form-control mr-sm-2 bg-white" type="search" placeholder="max" aria-label="Search" id="max">
+      <button class="btn btn-outline-success my-2 my-sm-0 btn-success" type="submit" id="searchBtn">Search</button>
     </div>
     <div class="addFilter"></div>
   `;
 
+  // add event listener to search button
+  document.getElementById("searchBtn").addEventListener("click", function () {
+    getData();
+    bookPage();
+  });
+}
+
+function getData() {
+  min = document.getElementById("min").value;
+  max = document.getElementById("max").value;
 }
 
 function filterByCategori() {
@@ -130,13 +143,15 @@ document.querySelector("#bookButton").onclick = function () {
 }
 
 function bookPage() {
+
   const homeElement = document.querySelector(".mainPage");
   homeElement.innerHTML = ``;
 
   console.log(chosenCategoryFilter)
 
   let filteredBooks = books.filter(
-    ({ category }) => (chosenCategoryFilter === 'all' || chosenCategoryFilter === category)
+    ({ category, price }) => (chosenCategoryFilter === 'all' || chosenCategoryFilter === category)
+      && (price >= min && price <= max)
   );
 
 
