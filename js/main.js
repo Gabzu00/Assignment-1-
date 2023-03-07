@@ -5,8 +5,8 @@ let books,
   chosenCategoryFilter = 'all',
   go = 0,
   min = 0,
-  max = 1000;
-
+  max = 1000,
+  selectedAuthor;
 
 async function start() {
   books = await getJSON('/json/books.json')
@@ -58,11 +58,26 @@ function filterByAuthor() {
       <p class="FirstPageTitle text-center text-dark"> These are the books available</p>
       <p class="priceRange text-center text-dark"> Select a author</p>
       <form class="form-inline">
-        <input class="form-control mr-sm-2 bg-white" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0 btn-success" type="submit">Search</button>
+        <input class="form-control mr-sm-2 bg-white" type="search" placeholder="Author" aria-label="Search" id="authorID">
+        <button class="btn btn-outline-success my-2 my-sm-0 btn-success" type="submit" id="searchAuthor">Search</button>
       </form>
     <div class="priceFilter"></div>
   `;
+
+  document.getElementById("searchAuthor").addEventListener("click", function () {
+
+    getAuthor();
+    bookPage();
+  });
+}
+
+function getAuthor() {
+  debugger
+  if (document.getElementById("authorID").value === '') {
+    selectedAuthor = '';
+  } else {
+    selectedAuthor = document.getElementById("authorID").value;
+  }
 }
 
 function filterByPrice() {
@@ -138,20 +153,18 @@ document.querySelector("#bookButton").onclick = function () {
   if (go == 0) {
     go++;
   }
-
   start();
 }
 
 function bookPage() {
-
   const homeElement = document.querySelector(".mainPage");
   homeElement.innerHTML = ``;
 
   console.log(chosenCategoryFilter)
-
+  debugger
   let filteredBooks = books.filter(
-    ({ category, price }) => (chosenCategoryFilter === 'all' || chosenCategoryFilter === category)
-      && (price >= min && price <= max)
+    ({ category, price, author }) => (chosenCategoryFilter === 'all' || chosenCategoryFilter === category)
+      && (price >= min && price <= max) && (author === selectedAuthor || selectedAuthor === undefined || selectedAuthor === '')
   );
 
 
