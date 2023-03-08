@@ -198,7 +198,7 @@ function bookPage() {
   homeElement.innerHTML = ``;
 
   console.log(chosenCategoryFilter)
-  debugger
+
   let filteredBooks = books.filter(
     ({ category, price, author }) =>
       (chosenCategoryFilter === 'all' || chosenCategoryFilter === category) &&
